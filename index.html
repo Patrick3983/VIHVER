@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vihveer - Artista Plástico</title>
     <style>
+            .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            width: calc(33.33% - 20px); /* 33.33% do espaço disponível menos a margem entre as imagens */
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Borda arredondada para as imagens */
         /* Estilos para dispositivos com largura de tela menor ou igual a 768px (tablets e celulares) */
         @media only screen and (max-width: 768px) {
             .container {
@@ -211,7 +228,10 @@
         <div class="container">
             <h2>Galeria</h2>
             <div class="gallery-container">
-                  <img src="https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.22_3668a67f.jpg?raw=true" alt="Descrição da imagem">
+    
+                <img src="https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.22_3668a67f.jpg?raw=true" alt="Descrição da imagem">
+                <img src= "https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.23_08ef292c.jpg?raw=true>
+                    <img src = "https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.23_62c2654b.jpg?raw=true>
                 <!-- As imagens serão carregadas dinamicamente aqui -->
             </div>
         </div>
