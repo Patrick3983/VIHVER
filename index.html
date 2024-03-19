@@ -171,6 +171,15 @@
             padding: 20px 0;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
         }
+        .whatsapp-link {
+    color: #25d366; /* Cor do WhatsApp */
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
     </style>
 </head>
 <body>
@@ -227,12 +236,10 @@
         <form id="contact-form">
             <input type="text" name="name" placeholder="Seu Nome" required>
             <input type="email" name="email" placeholder="Seu E-mail" required>
-            <input type="tel" name="phone" placeholder="Seu Número de Telefone" required>
             <textarea name="message" placeholder="Sua Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="btn">Enviar</button>
         </form>
-        <!-- Link para o WhatsApp -->
-        <p>ou entre em contato pelo WhatsApp: <a href="https://wa.me/553599744936">Clique aqui</a></p>
+        <p>Ou entre em contato pelo WhatsApp: <a href="https://wa.me/553599744936" class="whatsapp-link">Clique aqui <img src="whatsapp-icon.png" alt="WhatsApp"></a></p>
     </div>
 </section>
 
