@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vihveer - Artista Plástico</title>
     <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc5c; /* Realça a cor ao passar o mouse */
+        }
+
         /* Estilos para dispositivos com largura de tela menor ou igual a 768px (tablets e celulares) */
         @media only screen and (max-width: 768px) {
             .container {
@@ -71,70 +120,39 @@
             }
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f8f8f8;
+        /* Estilos específicos da galeria */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Alteração do tamanho das colunas */
+            gap: 20px;
+            justify-content: space-between;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
+        .gallery-item {
+            width: 100%;
             overflow: hidden;
+            border-radius: 10px;
         }
 
-        header {
-            background-color: #1e1e1e;
-            color: #fff;
-            padding: 20px 0;
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Aumenta a escala da imagem ao passar o mouse */
+        }
+
+        section {
+            padding: 40px 0;
             text-align: center;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #fff;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ff6f61; /* Realça a cor ao passar o mouse */
-        }
-
-        #hero {
-            background-image: linear-gradient(to right, #ff6f61, #ffcc5c);
-            color: #fff;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        #hero h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: bold;
         }
 
         .btn {
             display: inline-block;
-            background-color: #ff6f61;
+            background-color: #ffcc5c;
             color: #fff;
             padding: 12px 24px;
             text-decoration: none;
@@ -143,38 +161,25 @@
         }
 
         .btn:hover {
-            background-color: #ff5045;
-        }
-
-        section {
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-container img {
-            width: 100%;
-            border-radius: 5px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-container img:hover {
-            transform: scale(1.05); /* Aumenta a escala da imagem ao passar o mouse */
+            background-color: #ff6f61;
         }
 
         footer {
-            background-color: #1e1e1e;
+            background-color: #ff6f61;
             color: #fff;
             text-align: center;
             padding: 20px 0;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
         }
+        .whatsapp-link {
+    color: #25d366; /* Cor do WhatsApp */
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
     </style>
 </head>
 <body>
@@ -203,30 +208,44 @@
         <section id="about">
             <div class="container">
                 <h2>Sobre o Vihver</h2>
-                <p>O Vihver é dedicado à criação de peças artísticas únicas, desde pinturas até itens artesanais. Cada criação nfeita com paixão e atenção aos detalhes.</p>
-</div>
+                <p>O Vihver é dedicado à criação de peças artísticas únicas, desde pinturas até itens artesanais. Cada criação é feita com paixão e atenção aos detalhes.</p>
+            
+    </div>
 </section>
 
-    <section id="gallery">
-        <div class="container">
-            <h2>Galeria</h2>
-            <div class="gallery-container">
-                <!-- As imagens serão carregadas dinamicamente aqui -->
+<section id="gallery">
+    <div class="container">
+        <h2>Galeria</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.22_3668a67f.jpg?raw=true" alt="Descrição da imagem">
             </div>
+            <div class="gallery-item">
+                <img src="https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.23_08ef292c.jpg?raw=true" alt="Descrição da imagem">
+            </div>
+            <div class="gallery-item">
+                <img src="https://github.com/Patrick3983/VIHVER/blob/main/Imagem%20do%20WhatsApp%20de%202024-03-18%20%C3%A0(s)%2021.42.23_62c2654b.jpg?raw=true" alt="Descrição da imagem">
+            </div>
+            <!-- Adicione mais imagens conforme necessário -->
         </div>
-    </section>
+    </div>
+</section>
+<section id="contact">
+    <div class="container">
+        <h2>Contate-nos</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <p>Ou entre em contato pelo WhatsApp: <a href="https://wa.me/553599744936" class="whatsapp-link">Clique aqui <img src="whatsapp-icon.png" alt="WhatsApp"></a></p>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contate-nos</h2>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Seu Nome" required>
-                <input type="email" name="email" placeholder="Seu E-mail" required>
-                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+        </form>
+    </div>
+</section>
 </main>
 
 <footer>
